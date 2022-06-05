@@ -1,0 +1,49 @@
+.cabinet {
+  display: flex;
+
+  @media (max-width: $tablet-bp) {
+    flex-direction: column;
+  }
+}
+
+.cabinet__form {
+  width: 34rem;
+
+  @media (max-width: $tablet-bp) {
+    // Меняем последовательность
+    margin-top: 5rem;
+    order: 2;
+  }
+}
+
+.cabinet__avatar {
+  flex-grow: 1;
+  padding-left: 11rem;
+
+  img {
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: $tablet-bp) {
+    // Меняем последовательность (делаем аватарку сверху)
+    order: 1;
+    padding-left: 0;
+  }
+}
+
+.cabinet__file {
+  font-size: 1.4rem;
+  color: #107eff;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: text-decoration 0.3s ease-in;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  input {
+    display: none;
+  }
+}
